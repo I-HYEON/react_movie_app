@@ -1,9 +1,16 @@
+import Home from './routes/Home';
+import Detail from './routes/Detail';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      <h1>영화앱만들기시작</h1>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="detail/" element={<Detail/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
